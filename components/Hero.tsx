@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
 import ParticleBackground from "./ParticleBackground";
+import DownloadButton from "./DownloadButton";
 
 export default function Hero() {
   return (
@@ -60,29 +60,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
             >
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 128, 128, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-medical-blue to-medical-teal text-white rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden group text-sm md:text-base"
-              >
-                <span className="relative z-10">Request Live Demo</span>
-                <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform md:w-5 md:h-5" />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-medical-teal to-medical-blue"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 md:px-8 py-3 md:py-4 glass rounded-lg font-semibold flex items-center justify-center gap-2 text-white group text-sm md:text-base"
-              >
-                <Play size={18} className="group-hover:scale-110 transition-transform md:w-5 md:h-5" />
-                Watch Video
-              </motion.button>
+              <DownloadButton variant="primary" size="md" />
             </motion.div>
 
             <motion.div 
